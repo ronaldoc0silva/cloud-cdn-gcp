@@ -13,10 +13,10 @@ resource "google_compute_global_forwarding_rule" "cdn_global_forwarding_rule" {
   project    = var.project_id
 }
 
-resource "google_compute_global_forwarding_rule" "cdn_global_forwarding_http_rule" {
-  name       = var.forwarding_rule_http_name
-  target     = google_compute_target_http_proxy.cdn_http_proxy.self_link
-  ip_address = google_compute_global_address.cdn_bucket_address.address
-  port_range = "80"
-  project    = var.project_id
-}
+# resource "google_compute_global_forwarding_rule" "cdn_global_forwarding_http_rule" {
+#   name       = var.forwarding_rule_http_name
+#   target     = google_compute_target_http_proxy.cdn_http_proxy.self_link
+#   ip_address = google_compute_global_address.cdn_bucket_address.address
+#   port_range = "80"
+#   project    = var.project_id
+# }
