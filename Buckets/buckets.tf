@@ -8,7 +8,7 @@
 
 resource "google_compute_backend_bucket" "cdn_backend_bucket_tatic_vero" {
   name        = var.cdn_bucket_name
-  description = "Backend bucket for serving static content through CDN"
+  description = "Backend bucket for serving static content through CD"
   bucket_name = data.google_storage_bucket.my-bucket.name
   enable_cdn  = true
   project     = var.project_id
